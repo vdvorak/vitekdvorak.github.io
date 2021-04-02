@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="post">
+  <h1>Tag: {{ page.post }}</h1>
+  <ul class="nolist">
+    {% for post in site.tags[page.tag] %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date |
+      date_to_string }})
+    </li>
+    {% endfor %}
+  </ul>
+</div>

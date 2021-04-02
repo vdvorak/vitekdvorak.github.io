@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/0fc745b86e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="{{site.url}}/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="img">
+          <img class="photo" src="{{site.url}}/assets/img/me.jpeg" alt="me" />
+        </div>
+        <div class="heading">
+          <h1 class="title">{{site.title}}</h1>
+          <p>{{site.description}}</p>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/{{github_usename}}"
+            ><i class="fa fa-github"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="leftcolumn">{{content}}</div>
+
+        <div class="rightcolumn">
+          <div class="card">
+            <ul class="nolist">
+              <li><a class="nav-link" href="{{site.url}}/">About me</a></li>
+              <li>
+                <a class="nav-link" href="{{site.url}}/curiculum-vitae"
+                  >Curiculum vitae</a
+                >
+              </li>
+              <li><a class="nav-link" href="{{site.url}}/blog">Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Last blog articles:</h3>
+            {% for post in site.posts limit: 5 %}
+            <a href="{{post.url}}">{{post.title}}</a> {% endfor %}
+          </div>
+
+          <div class="card">
+            <h3>Tags:</h3>
+            <div class="tags">
+              {% assign tags = site.tags %} {% for tag in tags %}
+              <div class="tag">
+                <a href="/tag/{{ tag | first | slugify | downcase}}/">
+                  {{ tag[0] | downcase }}
+                </a>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
