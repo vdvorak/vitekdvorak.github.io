@@ -55,9 +55,7 @@
             <div class="tags">
               {% assign tags = site.tags %} {% for tag in tags %}
               <div class="tag">
-                <a href="/tag/{{ tag | first | slugify | downcase  }}.html">
-                  {{ tag[0] }}
-                </a>
+                <a href="/tag/{{ tag | first | slugify }}"> {{ tag[0] }} </a>
               </div>
               {% endfor %}
             </div>
