@@ -23,7 +23,7 @@ email: vitekdvorak70@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   I prefer to discover a causality rather than become a king of Persia. --Democritus
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://localhost:4000" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://vitekdvorak.cz" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: vitekdvorak
 
 # Build settings
