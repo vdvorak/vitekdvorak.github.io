@@ -44,9 +44,7 @@
             <div class="tags">
               {% for post in site.posts limit: 5 %}
               <div class="tag">
-                <a href="{{post.url | replace: '.html', ''}}">
-                  {{post.title}}
-                </a>
+                <a href="{{post.url | downcase }}"> {{post.title}} </a>
               </div>
               {% endfor %}
             </div>
@@ -57,7 +55,9 @@
             <div class="tags">
               {% assign tags = site.tags %} {% for tag in tags %}
               <div class="tag">
-                <a href="/tag/{{ tag | first | slugify }}"> {{ tag[0] }} </a>
+                <a href="/tag/{{ tag | first |  downcase }}.html">
+                  {{ tag[0] }}
+                </a>
               </div>
               {% endfor %}
             </div>
