@@ -1,6 +1,6 @@
 items:
   - title: About me
-    url: index.html
+    url: /
 
   - title: Curiculum vitae
     url: /curiculum-vitae
