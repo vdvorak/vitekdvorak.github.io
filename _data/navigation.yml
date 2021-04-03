@@ -1,0 +1,9 @@
+items:
+  - title: About me
+    url: index.html
+
+  - title: Curiculum vitae
+    url: /curiculum-vitae
+
+  - title: Blog
+    url: /blog

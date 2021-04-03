@@ -138,9 +138,7 @@ p {
 .title {
   color: var(--primary);
 }
-.nolist {
-  margin: 0;
-}
+
 .photo {
   padding-right: 15px;
   border: none;

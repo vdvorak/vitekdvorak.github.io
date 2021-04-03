@@ -31,20 +31,23 @@
         <div class="rightcolumn">
           <div class="card">
             <ul class="nolist">
-              <li><a class="nav-link" href="{{site.url}}/">About me</a></li>
+              {% for item in site.data.navigation.items %}
               <li>
-                <a class="nav-link" href="{{site.url}}/curiculum-vitae"
-                  >Curiculum vitae</a
-                >
+                <a class="nav-link" href="{{ item.url }}">{{ item.title }}</a>
               </li>
-              <li><a class="nav-link" href="{{site.url}}/blog">Blog</a></li>
+              {% endfor %}
             </ul>
           </div>
 
           <div class="card">
             <h3>Last blog articles:</h3>
-            {% for post in site.posts limit: 5 %}
-            <a href="{{post.url}}">{{post.title}}</a> {% endfor %}
+            <div class="tags">
+              {% for post in site.posts limit: 5 %}
+              <div class="tag">
+                <a href="{{post.url}}"> {{post.title}} </a>
+              </div>
+              {% endfor %}
+            </div>
           </div>
 
           <div class="card">
@@ -52,9 +55,7 @@
             <div class="tags">
               {% assign tags = site.tags %} {% for tag in tags %}
               <div class="tag">
-                <a href="/tag/{{ tag | first | slugify | downcase}}/">
-                  {{ tag[0] }}
-                </a>
+                <a href="/tag/{{ tag | first | slugify }}/"> {{ tag[0] }} </a>
               </div>
               {% endfor %}
             </div>
