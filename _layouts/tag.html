@@ -7,7 +7,7 @@ layout: default
   <ul class="nolist">
     {% for post in site.tags[page.tag] %}
     <li>
-      <a href="{{ post.url | downcase }}#disqus_thread">{{ post }}</a> ({{ post.date |
+      <a href="{{ post.url | downcase }}#disqus_thread">{{ post.title }}</a> ({{ post.date |
       date_to_string }})
     </li>
     {% endfor %}
