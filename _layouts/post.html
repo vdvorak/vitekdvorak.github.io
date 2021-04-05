@@ -8,12 +8,16 @@ comments: false
 <article>{{ content }}</article>
 
 <hr />
-Tags: 
-<div class="tags">
-   {% for tag in page.tags %}
-        <span class="tag">{{tag}}</span>
-   {% endfor %}
- </div>
+    <h3>Tags:</h3>
+            <div class="tags">
+              {% assign tags = site.tags %} {% for tag in tags %}
+              <div class="tag">
+                <a href="/tag/{{ tag | first |  downcase }}.html">
+                  {{ tag[0] }}
+                </a>
+              </div>
+              {% endfor %}
+    </div>
 <hr />
 {% if page.comments %}
   <div id="disqus_thread"></div>
