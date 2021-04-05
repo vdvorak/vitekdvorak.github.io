@@ -6,7 +6,7 @@ comments: true
 <h1>{{ page.title }}</h1>
 <article>{{ content }}</article>
 
-
+{% if page.comments %}
 <div id="disqus_thread"></div>
 <script>
     /**
@@ -15,8 +15,8 @@ comments: true
      */
     /*
     var disqus_config = function () {
-        this.page.url = "{{page.content.absolute_url}}"
-        this.page.identifier = "{{page.content.id}}"
+        this.page.url = "{{site.url}}"
+        this.page.identifier = "{{ page.url }}"
     };
     */
     (function() {  // DON'T EDIT BELOW THIS LINE
@@ -29,4 +29,4 @@ comments: true
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
+{% endif %}
