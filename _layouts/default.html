@@ -46,7 +46,7 @@
             <div class="tags">
               {% for post in site.posts limit: 5 %}
               <div class="tag">
-                <a href="{{post.url | downcase }}"> {{post.title}} </a>
+                <a href="{{post.url | downcase }}#disqus_thread"> {{post.title}} </a>
               </div>
               {% endfor %}
             </div>
