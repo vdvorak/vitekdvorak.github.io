@@ -21,3 +21,6 @@ comments: true
     </div>
    </p>
 <hr />
+{% if site.disqus.shortname %}
+  {% include disqus_comments.html %}
+{% endif %}
