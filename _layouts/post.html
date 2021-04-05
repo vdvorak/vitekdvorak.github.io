@@ -1,6 +1,6 @@
 ---
 layout: default
-comments: false
+comments: true
 ---
 
 <h1>{{ page.title }}</h1>
@@ -8,10 +8,11 @@ comments: false
 <article>{{ content }}</article>
 
 <hr />
-    <span>Tags:</span>
+    
             <div class="row">
+                <div>Tags:</div>
               {% assign tags = site.tags %} {% for tag in tags %}
-              <div class="rtag">
+              <div class="tag">
                 <a href="/tag/{{ tag | first |  downcase }}.html">
                   {{ tag[0] }}
                 </a>
