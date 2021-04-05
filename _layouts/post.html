@@ -8,8 +8,8 @@ comments: true
 <article>{{ content }}</article>
 
 <hr />
-    
-            <div class="row">
+   <p>
+        <div class="row">
                 <div>Tags:</div>
               {% assign tags = site.tags %} {% for tag in tags %}
               <div class="tag">
@@ -19,6 +19,7 @@ comments: true
               </div>
               {% endfor %}
     </div>
+   </p>
 <hr />
 {% if page.comments %}
   <div id="disqus_thread"></div>
