@@ -41,13 +41,13 @@
               {% endfor %}
             </ul>
           </div>
-
+  <script id="dsq-count-scr" src="//vitekdvorak-cz.disqus.com/count.js" async></script>
           <div class="card">
             <h3>Last blog articles:</h3>
             <div class="tags">
               {% for post in site.posts limit: 5 %}
               <div class="tag">
-                <a href="{{post.url | downcase }}#disqus_thread"> EMPTY </a>
+                <a href="{{post.url | downcase }}#disqus_thread"> {{post.title}} </a>
               </div>
               {% endfor %}
             </div>
@@ -68,6 +68,5 @@
         </div>
       </div>
     </div>
-   <!--<script id="dsq-count-scr" src="//vitekdvorak-cz.disqus.com/count.js" async></script>-->
   </body>
 </html>
