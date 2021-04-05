@@ -24,7 +24,7 @@ comments: true
 {% if page.comments %}
   <div id="disqus_thread"></div>
   <script type="text/javascript">
-   /* var disqus_config = function () {
+    var disqus_config = function () {
       // Here is an example,
       // this.page.url = "https://poanchen.github.io/blog/2017/07/27/how-to-add-disqus-to-your-jekyll-site";
       this.page.url = "{{site.url}}{{ page.url }}";
@@ -38,7 +38,7 @@ comments: true
       s.src = '//vitekdvorak-cz.disqus.com/embed.js';
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
-    })();*/
+    })();
   </script>
   <noscript>
     Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
