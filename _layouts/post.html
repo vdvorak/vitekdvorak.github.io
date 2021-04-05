@@ -9,15 +9,15 @@ comments: false
 
 <hr />
     <span>Tags:</span>
-            <span class="tags">
+            <div class="row">
               {% assign tags = site.tags %} {% for tag in tags %}
-              <span class="tag">
+              <div class="rtag">
                 <a href="/tag/{{ tag | first |  downcase }}.html">
                   {{ tag[0] }}
                 </a>
-              </span>
+              </div>
               {% endfor %}
-    </span>
+    </div>
 <hr />
 {% if page.comments %}
   <div id="disqus_thread"></div>
