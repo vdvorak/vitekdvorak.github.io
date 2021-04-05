@@ -7,6 +7,11 @@ comments: false
 
 <article>{{ content }}</article>
 
+<hr />
+Tags: {% for tag in page.tags %}
+        <span>{{tag}}</span>
+      {% endfor %}
+<hr />
 {% if page.comments %}
   <div id="disqus_thread"></div>
   <script type="text/javascript">
