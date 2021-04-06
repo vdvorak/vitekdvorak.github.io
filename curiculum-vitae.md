@@ -10,9 +10,9 @@ Location: **Znojmo, Czech Republic, European Union**
 
 ### Work experience
 
-[2020-present] **Junior software develope**r @ [Navigo3](https://navigo3.com)   
+[2020-present] **Junior frontend develope**r @ [Navigo3](https://navigo3.com)   
 
-Programmer of project management software
+Frontend developer of project management software
 
 [2016-2019] **Main technical developer** @ ValenteProject studio   
 
