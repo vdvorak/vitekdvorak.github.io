@@ -23,6 +23,6 @@ Programmer of project management software
 
 ### Education
 
-[2020-present] **Bachelor** @ Zlín Tomas Bata University field Software engineering
+[2020-present] **Bachelor** @ Zlín Tomas Bata University - **Software Engineering**
 
-[2016-2020] **Student** @ High School Bussiness academy field information technologies
+[2016-2020] **Student** @ High School Bussiness academy - **Information Technology**
