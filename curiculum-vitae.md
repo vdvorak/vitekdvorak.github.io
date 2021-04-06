@@ -20,6 +20,7 @@ Programmer of project management software
 
 ### Small development
 [2020] website [pneukarnik.cz](https://pneukarnik.cz)
+[2020] Charity game to support australia
 
 ### Education
 
