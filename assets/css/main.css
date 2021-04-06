@@ -9,6 +9,7 @@
 .col-md-4 {
     border-left: 1px solid #ccc;
   height: fit-content;
+  margin-top: 1em;
 
 }
 .ftags {
