@@ -24,7 +24,7 @@ img {
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  padding: 20px;
+/*  padding: 20px;*/
   background: #fff;
   line-height: 1.42;
 }
@@ -66,19 +66,6 @@ a:hover {
   color: var(--primary);
 }
 
-.leftcolumn {
-  float: left;
-  padding: 1em;
-}
-
-/* Right column */
-.rightcolumn {
-  margin-top: 1em;
-  float: left;
-  padding-left: 20px;
-  border-left: 1px solid #ccc;
-}
-
 .nolist {
   list-style-type: none;
   padding: 0;
@@ -115,7 +102,7 @@ a:hover {
 h1 {
   font-size: var(--px36);
   font-weight: 500;
-  margin: 0;
+ 
 }
 p {
   font-size: var(--px16);
