@@ -19,7 +19,7 @@ Programmer of project management software
  Main technical creator of an indie open world fantasy RPG
 
 ### Small development
-[2020] website [pneukarnik.cz](https://pneukarnik.cz)
+[2020] website [pneukarnik.cz](https://pneukarnik.cz)   
 [2020] Charity game to support australia
 
 ### Education
