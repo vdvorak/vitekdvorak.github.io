@@ -10,13 +10,13 @@ Residing in **Znojmo, Czech Republic, European Union**
 
 ### Work experience
 
-[2019-present] **Junior frontend develope**r @ [Navigo3](https://navigo3.com)   
+[2019-present] **Junior frontend developer** @ [Navigo3](https://navigo3.com)
 
-Frontend developer of project management software   
+Frontend developer of project management softwares   
 
-[2016-2019] **Main technical developer** @ ValenteProject studio   
+[2016-2019] **Game developer** @ ValenteProject studio   
 
- Main technical creator of an indie open world fantasy RPG   
+ Developer of an indie open world fantasy RPG   
 
 ### Small development
 [2020] website [pneukarnik.cz](https://pneukarnik.cz)   
