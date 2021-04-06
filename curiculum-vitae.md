@@ -5,16 +5,16 @@ permalink: /curiculum-vitae/
 ---
 
 ### Basics
-Name: Vítek Dvořák   
-Location: Znojmo, Czech Republic, European Union
+Name: **Vítek Dvořák**   
+Location: **Znojmo, Czech Republic, European Union**
 
 ### Work experience
 
-[2019-present] Part-time job as junior software developer @ [Navigo3](https://navigo3.com)   
+[2019-present] **junior software develope**r @ [Navigo3](https://navigo3.com)   
 
 Programmer of project management software
 
-[2016-2019] Main developer @ ValenteProject studio   
+[2016-2019] **Main developer** @ ValenteProject studio   
 
  Main technical creator of an indie open world fantasy RPG
 
@@ -23,6 +23,6 @@ Programmer of project management software
 
 ### Education
 
-[2020-present] Bachelor @ Zlín Tomas Bata University field Software engineering
+[2020-present] **Bachelor** @ Zlín Tomas Bata University field Software engineering
 
-[2016-2020] Student @ High School Bussiness academy field information technologies
+[2016-2020] **Student** @ High School Bussiness academy field information technologies
