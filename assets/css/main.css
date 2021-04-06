@@ -13,7 +13,7 @@
 
 }
 .ftags {
-  dispaly: flex;
+  display: flex;
   flex-direction: row;
 }
 img {
