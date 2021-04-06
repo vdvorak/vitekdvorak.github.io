@@ -24,6 +24,6 @@ Frontend developer of project management softwares
 
 ### Education   
 
-[2020-present] **Bachelor** @ Zlín Tomas Bata University - **Software Engineering**
+[2020-present] **Software Engineering**, **Bachelor degree** @ Zlín Tomas Bata University - 
 
-[2016-2020] **Student** @ High School Bussiness academy - **Information Technology**
+[2016-2020] **Information Technology** @ Bussiness academy
