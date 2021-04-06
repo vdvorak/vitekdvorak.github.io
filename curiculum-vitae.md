@@ -10,7 +10,7 @@ Location: **Znojmo, Czech Republic, European Union**
 
 ### Work experience
 
-[2020-present] **Junior frontend develope**r @ [Navigo3](https://navigo3.com)   
+[2019-present] **Junior frontend develope**r @ [Navigo3](https://navigo3.com)   
 
 Frontend developer of project management software
 
