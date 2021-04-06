@@ -5,8 +5,8 @@ permalink: /curiculum-vitae/
 ---
 
 ### Basics
-Name: **Vítek Dvořák**   
-Residing: **Znojmo, Czech Republic, European Union**
+**Vítek Dvořák**   
+Residing in **Znojmo, Czech Republic, European Union**
 
 ### Work experience
 
