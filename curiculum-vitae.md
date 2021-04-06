@@ -18,7 +18,7 @@ Frontend developer of project management softwares
 
  Developer of an indie open world fantasy RPG   
 
-### Small development
+### Freelance work
 [2020] website [pneukarnik.cz](https://pneukarnik.cz)   
 [2020] Charity game to support australia   
 
