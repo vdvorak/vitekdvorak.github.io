@@ -1,19 +1,150 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://vitekdvorak.cz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vitekdvorak.cz/" rel="alternate" type="text/html" /><updated>2021-04-03T22:57:50+02:00</updated><id>https://vitekdvorak.cz/feed.xml</id><title type="html">Vítek Dvořák</title><subtitle></subtitle><entry><title type="html">BIM 360</title><link href="https://vitekdvorak.cz/2021/04/03/bim360.html" rel="alternate" type="text/html" title="BIM 360" /><published>2021-04-03T02:00:00+02:00</published><updated>2021-04-03T02:00:00+02:00</updated><id>https://vitekdvorak.cz/2021/04/03/bim360</id><content type="html" xml:base="https://vitekdvorak.cz/2021/04/03/bim360.html">&lt;p&gt;My last task in &lt;a href=&quot;https://navigo3.com/&quot;&gt;Navigo3&lt;/a&gt; was to find the way, how to integrate BIM to display users issues.
-We decided to work with BIM based software from &lt;a href=&quot;https://www.autodesk.com/&quot;&gt;Autodesk&lt;/a&gt; &lt;a href=&quot;https://www.autodesk.com/bim-360/&quot;&gt;BIM 360&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://vitekdvorak.cz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vitekdvorak.cz/" rel="alternate" type="text/html" /><updated>2021-04-06T19:21:20+02:00</updated><id>https://vitekdvorak.cz/feed.xml</id><title type="html">Vítek Dvořák</title><subtitle></subtitle><entry><title type="html">BIM 360</title><link href="https://vitekdvorak.cz/2021/04/03/bim360.html" rel="alternate" type="text/html" title="BIM 360" /><published>2021-04-03T02:00:00+02:00</published><updated>2021-04-03T02:00:00+02:00</updated><id>https://vitekdvorak.cz/2021/04/03/bim360</id><content type="html" xml:base="https://vitekdvorak.cz/2021/04/03/bim360.html">&lt;p&gt;My last task at &lt;a href=&quot;https://navigo3.com/&quot;&gt;Navigo3&lt;/a&gt; was to find the way, how to integrate BIM into our software.&lt;br /&gt;
+I worked with BIM-based software from &lt;a href=&quot;https://www.autodesk.com/&quot;&gt;Autodesk&lt;/a&gt; - &lt;a href=&quot;https://www.autodesk.com/bim-360/&quot;&gt;BIM 360&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;building-testing-enviroment&quot;&gt;Building testing enviroment&lt;/h2&gt;
+&lt;h2 id=&quot;basic-structure&quot;&gt;Basic structure&lt;/h2&gt;
+
+&lt;p&gt;Our user is for example architect and he works on project A for his Customer1 and project B for Customer2 and he wants to see his issues in Navigo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/bim360-demo-diagram.PNG&quot; alt=&quot;BIM 360 demo diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is&quot;&gt;What is…&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Admin account&lt;/strong&gt; - Autodesk account with assigned an instance of BIM 360 (&lt;a href=&quot;https://admin.b360.autodesk.com&quot;&gt;Sign in&lt;/a&gt;)&lt;br /&gt;
+&lt;strong&gt;Employee account&lt;/strong&gt; - basic Autodesk account (&lt;a href=&quot;(https://www.autodesk.com/)&quot;&gt;Sign in&lt;/a&gt;)&lt;br /&gt;
+&lt;strong&gt;Client app&lt;/strong&gt; - representation of the client’s software (&lt;a href=&quot;https://forge.autodesk.com/&quot;&gt;Sign in&lt;/a&gt;)&lt;br /&gt;
+&lt;strong&gt;Callback URL&lt;/strong&gt; - after the first authentification, the client will be redirected to this URL with an authentication code&lt;br /&gt;
+&lt;strong&gt;Access token&lt;/strong&gt; - allows you to retrieve data from BIM 360
+&lt;strong&gt;Refresh token&lt;/strong&gt; - allows you to get a new Access token without contacting the user&lt;/p&gt;
+
+&lt;h2 id=&quot;building-a-testing-environment&quot;&gt;Building a testing environment&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Create accounts at &lt;a href=&quot;https://www.autodesk.com/&quot;&gt;Autodesk&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Creating an &lt;a href=&quot;https://www.autodesk.com/&quot;&gt;Autodesk&lt;/a&gt; accounts&lt;/strong&gt;&lt;/p&gt;
 
     &lt;ul&gt;
-      &lt;li&gt;representing your client (OurCompany)&lt;/li&gt;
-      &lt;li&gt;representing client of your client (OtherCompany)&lt;/li&gt;
-      &lt;li&gt;representing employee of your company&lt;/li&gt;
+      &lt;li&gt;Company account (&lt;strong&gt;OurCompany&lt;/strong&gt;)&lt;/li&gt;
+      &lt;li&gt;Employee account (&lt;strong&gt;OurEmployee&lt;/strong&gt;)&lt;/li&gt;
+      &lt;li&gt;Company’s client account (&lt;strong&gt;OtherCompany&lt;/strong&gt;)&lt;/li&gt;
+      &lt;li&gt;Application account (&lt;strong&gt;application&lt;/strong&gt;)&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;h2 id=&quot;create-project&quot;&gt;&lt;strong&gt;Create project&lt;/strong&gt;&lt;/h2&gt;
+    &lt;p&gt;&lt;strong&gt;Creating a client app&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Sign in at &lt;a href=&quot;https://forge.autodesk.com/&quot;&gt;Autodesk forge&lt;/a&gt; with an App account&lt;/li&gt;
+      &lt;li&gt;Go to my apps&lt;/li&gt;
+      &lt;li&gt;Create a new app&lt;/li&gt;
+      &lt;li&gt;Set app name and callback URL
+&lt;br /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="BIM360" /><summary type="html">My last task in Navigo3 was to find the way, how to integrate BIM to display users issues. We decided to work with BIM based software from Autodesk BIM 360.</summary></entry></feed>
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Request a &lt;a href=&quot;https://www.autodesk.com/bim-360/start-for-free/&quot;&gt;BIM 360 demo&lt;/a&gt; for OurCompany and OtherCompany&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Prepare a project for the OurCompany and OtherCompany&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Sign in at &lt;a href=&quot;https://admin.b360.autodesk.com&quot;&gt;BIM 360 admin&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Create a testing project&lt;/li&gt;
+      &lt;li&gt;Click on the project in the project list&lt;/li&gt;
+      &lt;li&gt;On the page, you have been redirected to click to “Add member” and fill an email with the email of OurEmployee&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Connect your client app to the OurCompany and OtherCompany&lt;/strong&gt;&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Sign in at &lt;a href=&quot;https://admin.b360.autodesk.com&quot;&gt;BIM 360 admin&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Go to settings&lt;/li&gt;
+      &lt;li&gt;Open “Custom integrations”&lt;/li&gt;
+      &lt;li&gt;Create new custom integration
+        &lt;ul&gt;
+          &lt;li&gt;Select only “Document Management”&lt;/li&gt;
+          &lt;li&gt;Select “I am a developer”&lt;/li&gt;
+          &lt;li&gt;Go to the app you have created in step 2 and copy the client id to fill the dialog window&lt;/li&gt;
+          &lt;li&gt;Type some name of integration and click save&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;bim-360-authentication&quot;&gt;BIM 360 Authentication&lt;/h2&gt;
+
+&lt;p&gt;To read any data of project you have to go through “Three-legged authentication”&lt;/p&gt;
+
+&lt;h3 id=&quot;step-by-step&quot;&gt;Step by step&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Getting access token with users attention&lt;/strong&gt; (First authentication or missing refresh token)
+&lt;br /&gt;
+&lt;br /&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Getting authentication code&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Usage:&lt;/strong&gt; Thanks to the refresh token this step is required only once at the beginning, placed for example on some button&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=&quot;https://developer.api.autodesk.com/authentication/v1/authorize&quot;&gt;https://developer.api.autodesk.com/authentication/v1/authorize&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;
+            &lt;ul&gt;
+              &lt;li&gt;Client id (at your &lt;a href=&quot;https://forge.autodesk.com/&quot;&gt;Forge App&lt;/a&gt;)&lt;/li&gt;
+              &lt;li&gt;Client secret&lt;/li&gt;
+              &lt;li&gt;Client callback URL (redirect_uri)&lt;/li&gt;
+              &lt;li&gt;Type of response (&lt;strong&gt;response_type&lt;/strong&gt;=code)&lt;/li&gt;
+              &lt;li&gt;Access privileges you want to get from the user (&lt;strong&gt;scope&lt;/strong&gt;=data:read)&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;What will happen:&lt;/strong&gt;
+            &lt;ul&gt;
+              &lt;li&gt;User will be redirected to the Autodesk authentication page&lt;/li&gt;
+              &lt;li&gt;After the user signs in he will be asked to grant privileges to your app&lt;/li&gt;
+              &lt;li&gt;When the user allows app access he will be redirected to your callback URL with authentication code in the URL parameter
+&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Getting access token&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Usage:&lt;/strong&gt; This token is used to authenticate your app when you requesting data&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;URL:&lt;/strong&gt; “&lt;a href=&quot;https://developer.api.autodesk.com/authentication/v1/gettoken&quot;&gt;https://developer.api.autodesk.com/authentication/v1/gettoken&lt;/a&gt;”&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Headers:&lt;/strong&gt; “Content-Type: application/x-www-form-URLencoded”&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Method:&lt;/strong&gt; “POST”&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;
+            &lt;ul&gt;
+              &lt;li&gt;client_id (in your &lt;a href=&quot;https://forge.autodesk.com/&quot;&gt;Forge App&lt;/a&gt;)&lt;/li&gt;
+              &lt;li&gt;client_secret&lt;/li&gt;
+              &lt;li&gt;Client callback URL (redirect_uri)&lt;/li&gt;
+              &lt;li&gt;Type of the authorization(&lt;strong&gt;grant_type&lt;/strong&gt;=code)&lt;/li&gt;
+              &lt;li&gt;Authentication code retrieved from the previous request&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;What will hapen:&lt;/strong&gt; After submitting the request server sends a response including “Access token” and “Refresh token”
+&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Getting access token with the refresh token&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Usage:&lt;/strong&gt; This token is used to authenticate your app when you requesting data&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;URL:&lt;/strong&gt; “&lt;a href=&quot;https://developer.api.autodesk.com/authentication/v1/refreshtoken&quot;&gt;https://developer.api.autodesk.com/authentication/v1/refreshtoken&lt;/a&gt;”&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Headers:&lt;/strong&gt; “Content-Type: application/x-www-form-URLencoded”&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Method:&lt;/strong&gt; “POST”&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;client_id (in your &lt;a href=&quot;https://forge.autodesk.com/&quot;&gt;Forge App&lt;/a&gt;)&lt;/li&gt;
+          &lt;li&gt;client_secret&lt;/li&gt;
+          &lt;li&gt;Type of authorzation (&lt;strong&gt;grant_type&lt;/strong&gt;=refresh_token)&lt;/li&gt;
+          &lt;li&gt;Refresh token you have stored&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;What will hapen:&lt;/strong&gt; After submitting the request server sends a response including “Access token” and “Refresh token”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;More details at &lt;a href=&quot;https://forge.autodesk.com/en/docs/bim360/v1/overview/introduction/&quot;&gt;BIM 360 API&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="BIM360" /><summary type="html">My last task at Navigo3 was to find the way, how to integrate BIM into our software. I worked with BIM-based software from Autodesk - BIM 360.</summary></entry></feed>
