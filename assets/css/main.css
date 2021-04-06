@@ -5,7 +5,10 @@
   --px16: 1em;
   --px36: 2.25em;
 }
-
+.ftags {
+  dispaly: flex;
+  flex-direction: row;
+}
 img {
  vertical-align: middle;
  max-width: 100%; 
