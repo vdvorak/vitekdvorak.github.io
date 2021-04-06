@@ -4,7 +4,7 @@ title: Curiculum vitae
 permalink: /curiculum-vitae/
 ---
 
-### Basics
+# Curiculum Vitae
 **Vítek Dvořák**   
 Residing in **Znojmo, Czech Republic, European Union**   
 
