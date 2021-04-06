@@ -5,6 +5,12 @@
   --px16: 1em;
   --px36: 2.25em;
 }
+
+.col-md-4 {
+    border-left: 1px solid #ccc;
+  height: fit-content;
+
+}
 .ftags {
   dispaly: flex;
   flex-direction: row;
