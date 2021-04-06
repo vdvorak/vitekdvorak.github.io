@@ -6,16 +6,14 @@ permalink: /curiculum-vitae/
 
 ### Basics
 **Vítek Dvořák**   
-Residing in **Znojmo, Czech Republic, European Union**
+Residing in **Znojmo, Czech Republic, European Union**   
 
 ### Work experience
 
 [2019-present] **Junior frontend developer** @ [Navigo3](https://navigo3.com)
-
 Frontend developer of project management softwares   
 
 [2016-2019] **Game developer** @ ValenteProject studio   
-
  Developer of an indie open world fantasy RPG   
 
 ### Freelance work
@@ -24,6 +22,5 @@ Frontend developer of project management softwares
 
 ### Education   
 
-[2020-present] **Software Engineering**, **Bachelor degree** @ Zlín Tomas Bata University - 
-
-[2016-2020] **Information Technology** @ Bussiness academy
+[2020-present] **Software Engineering**, **Bachelor degree** @ Zlín Tomas Bata University
+[2016-2020] **Information Technology** @ Secondary school of Bussiness
