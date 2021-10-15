@@ -30,6 +30,9 @@ tags: Programming
   - Require student's **work submission**!
 
   - Work on a **bigger projects** - don't create a new project for each lesson
+  ### The issues you will avoid with these rules
+    Every teacher i had from programming did this mistakes he shared the code with students(data projector/files) so the students were just typing what he was typing with no clue about the problem. In my fourth grade of high school i was helping my classmate with programming and the most creepy thing was that he didn't know in a fourth grade in Java, language he has worked about three years that he has to end up almost each of line with semicoln.
+  
 
 ### Teaching basics
   1. Give him knowledge about programming basics - data types, variables, conditions, cycles, functions, strings
