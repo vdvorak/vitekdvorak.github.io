@@ -5,9 +5,6 @@ date: 2021-10-15 00:00:00 +0000
 tags: programming,University
 ---
 
-
-# Learning and teaching programming
-
 ## Learning
   ⚠️ **LEARN ON YOUR SELF**
   
