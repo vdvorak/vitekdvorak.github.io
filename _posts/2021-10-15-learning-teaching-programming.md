@@ -33,7 +33,7 @@ tags: Programming
 
   - Work on a **bigger projects** - don't create new project each lesson
 
-## Teaching basics
+### Teaching basics
   1. Give him a knowlage about programming basics - data types, variables, conditions, cycles, functions, strings
   2. Give him some assignments to test if he realy understands - if not go through
   3. The most important thing you have to teach is problem decomposition the student must be able to decompose the problem to basic programming techniques for this can help
